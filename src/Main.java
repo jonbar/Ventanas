@@ -66,7 +66,15 @@ public class Main extends JFrame {
 		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.println("botoia sakatu da");
+				String testua = textFieldUsuario.getText();
+				String pasahitza = String.valueOf(passwordFieldContraseña.getPassword());
+//				String pasahitza = passwordFieldContraseña.getText();
+				
+				if (testua.equals("ikaslea") && pasahitza.equals("1234")){
+						btnNewButton.setForeground(Color.GREEN);
+				}else{
+					btnNewButton.setForeground(Color.RED);
+				}
 			}
 		});
 		btnNewButton.setBounds(45, 90, 101, 23);
